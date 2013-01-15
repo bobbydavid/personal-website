@@ -4,6 +4,7 @@
   <meta charset='utf-8' />
   <title>Robert Martin's page</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
+<!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
 </head>
 <body>
   <div id="title">
@@ -19,23 +20,38 @@
   </div>
 
   <div id="projects">
-    <h3>Projects</h3>
+    <h3>My Projects</h3>
     <ul>
-      <li><a href="jordana">Jordana</a></li>
+      <li class="proj">
+        <a href="jordana">Jordana</a>&nbsp;<div class="inline"><blockquote>
+          A sample website I made for a photographer friend.
+        </blockquote></div>
+      </li><li class="proj">
+        <a href="http://lifeafterdorms.com">LifeAfterDorms</a>&nbsp;<div class="inline"><blockquote>
+          My first website ever, created for UCLA students to find and rate
+          housing.
+        </blockquote></div>
+      </li>
     </ul>
   </div>
 
   <div id="copyright"></div>
 
   <script>
-    // calculate email address.
+    // calculate email address using VanillaJS.
     var e = 'senbsujo4Ahnbjm/dpn'.split('');
     for (i in e) { e[i]=String.fromCharCode(e[i].charCodeAt(0)-1) }
     document.getElementById('replace_with_email').href = 'mailto:'+e.join('');
 
-    // set copyright text.
+    // set copyright text using VanillaJS.
     document.getElementById('copyright').innerHTML =
         'Copyright &copy; ' + (new Date).getFullYear() + '.';
+
+    var triggers = document.getElementsByClassName('proj');
+    for (i in triggers) {
+      triggers[i].onmouseover = function() { this.className = 'proj on' };
+      triggers[i].onmouseout = function() { this.className = 'proj' };
+    }
   </script>
 </body>
 </html>

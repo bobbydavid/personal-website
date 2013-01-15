@@ -5,16 +5,26 @@ body {
   color: #777;
   font-family: sans-serif;
 }
-h1 {
+#title {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   margin: auto;
-  height: 100px;
+  height: 200px;
   width: 100%;
   text-align: center;
+}
+h1 {
   font-size: 100px;
   color: #444;
   opacity: 0.5;
+  margin: 0; padding: 0;
+}
+#title a {
+  text-decoration: underline;
+  color: #777;
+}
+#title a:hover {
+  color: #000;
 }
 #nav {
   list-style-type: none;

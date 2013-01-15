@@ -38,15 +38,16 @@
   <div id="copyright"></div>
 
   <script>
-    // calculate email address using VanillaJS.
+    // calculate email address.
     var e = 'senbsujo4Ahnbjm/dpn'.split('');
     for (i in e) { e[i]=String.fromCharCode(e[i].charCodeAt(0)-1) }
     document.getElementById('replace_with_email').href = 'mailto:'+e.join('');
 
-    // set copyright text using VanillaJS.
+    // set copyright text.
     document.getElementById('copyright').innerHTML =
         'Copyright &copy; ' + (new Date).getFullYear() + '.';
 
+    // set blockquotes to appear on mouseover.
     var triggers = document.getElementsByClassName('proj');
     for (i in triggers) {
       triggers[i].onmouseover = function() { this.className = 'proj on' };

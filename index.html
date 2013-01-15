@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Robert Martin's page</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <ul id="nav">
+    <li><a href="#" id="replace_with_email">Email</a></li>
+    <li><a href="https://github.com/bobbydavid" target="_blank">Github</a></li>
+    <li><a href="http://notjustburritos.tumblr.com" target="_blank">Weblog</a></li>
+    <li><a href="http://stackoverflow.com/users/895795/robert-martin" target="_blank">StackOverflow</a></li>
+  </ul>
+
+  <h1 id="title">Robert Martin</h1>
+
+  <div id="copyright"></div>
+
+  <script>
+    // calculate email address.
+    var e = 'senbsujo4Ahnbjm/dpn'.split('');
+    for (i in e) { e[i]=String.fromCharCode(e[i].charCodeAt(0)-1) }
+    document.getElementById('replace_with_email').href = 'mailto:'+e.join('');
+
+    // set copyright text.
+    document.getElementById('copyright').innerHTML =
+        'Copyright &copy; ' + (new Date).getFullYear() + '.';
+  </script>
+</body>
+</html>

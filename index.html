@@ -3,7 +3,7 @@
 <head>
   <meta charset='utf-8' />
   <title>Robert Martin's page</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 <!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
 </head>
 <body>
@@ -23,19 +23,35 @@
     <h3>My Projects</h3>
     <ul>
       <li class="proj">
-        <a href="jordana">Jordana</a>&nbsp;<div class="inline"><blockquote>
-          A sample website I made for a photographer friend.
+        <a href="https://github.com/bobbydavid/cannibal-solver#cannibal-problem">Cannibal Problem</a><div class="inline"><blockquote>
+          <p>Curious who would get eaten if you were stranded on a
+          desert island with your friends? Now you can find out in the most
+          logical way possible! I wrote this solver in OCaml that lets you
+          calculate your chances of survival.</p>
+          <p>This project forced me to become an expert in tail call
+          optimization and voting strategies.</p>
         </blockquote></div>
       </li><li class="proj">
-        <a href="http://lifeafterdorms.com">LifeAfterDorms</a>&nbsp;<div class="inline"><blockquote>
-          My first website ever, created for UCLA students to find and rate
-          housing.
+        <a href="https://github.com/bobbydavid/gist-in-tumblr">Gist-in-tumblr</a><div class="inline"><blockquote>
+          <p>Tumblr says you can't put Github gists into your block. This hack
+          lets you do it anyway.</p>
+        </blockquote></div>
+      </li><li class="proj">
+        <a href="jordana">Jordana</a><div class="inline"><blockquote>
+          <p>A classy sample website I made for a photographer friend.</p>
+        </blockquote></div>
+      </li><li class="proj">
+        <a href="http://lifeafterdorms.com">LifeAfterDorms</a><div class="inline"><blockquote>
+          <p>My first website ever, created for UCLA students to find and rate
+          housing.</p>
         </blockquote></div>
       </li>
     </ul>
   </div>
 
   <div id="copyright"></div>
+
+  <div id="center-holder"><div id="center"></div></div>
 
   <script>
     // calculate email address.
@@ -45,7 +61,7 @@
 
     // set copyright text.
     document.getElementById('copyright').innerHTML =
-        'Copyright &copy; ' + (new Date).getFullYear() + '.';
+        'Copyright &copy; ' + (new Date).getFullYear();
 
     // set blockquotes to appear on mouseover.
     var triggers = document.getElementsByClassName('proj');
@@ -53,6 +69,13 @@
       triggers[i].onmouseover = function() { this.className = 'proj on' };
       triggers[i].onmouseout = function() { this.className = 'proj' };
     }
+
+    /*
+    var t = document.getElementById('center');
+    var c = document.createElement('div');
+    c.setAttribute('style', 'z-index: -10; height: 400px; width: 400px; border-radius: 200px; background-color:#700; position: absolute; margin:auto; left:-200px; top:-200px');
+    t.appendChild(c);
+    */
   </script>
 </body>
 </html>
